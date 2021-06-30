@@ -53,7 +53,7 @@ public class ParamTambahAntrian {
 	    @ApiModelProperty(notes = "Queue Number", name="angkaantrean",value = "angkaantrean",example="12", required = true)
 	    private Integer angkaantrean;
 	    @ApiModelProperty(notes = "estimated consultation serviced", name="estimasidilayani",value = "estimasidilayani",example="1615869169000", required = true)
-	    private Integer estimasidilayani;
+	    private Long estimasidilayani;
 	    @ApiModelProperty(notes = "remaining JKN quota", name="sisakuotajkn",value = "sisakuotajkn",example="5", required = true)
 	    private Integer sisakuotajkn;
 	    @ApiModelProperty(notes = "JKN quota", name="kuotajkn",value = "kuotajkn",example="30", required = true)
@@ -92,7 +92,7 @@ public class ParamTambahAntrian {
 		public ParamTambahAntrian(String kodebooking, String jenispasien, String nomorkartu, String nik,
 				String nohp, String kodepoli, String namapoli, String pasienbaru, String norm, LocalDate tanggalperiksa,
 				String kodedokter, String namadokter, String jampraktek, String jeniskunjungan, String nomorreferensi,
-				String nomorantrean, Integer angkaantrean, Integer estimasidilayani, Integer sisakuotajkn,
+				String nomorantrean, Integer angkaantrean, Long estimasidilayani, Integer sisakuotajkn,
 				Integer kuotajkn, Integer sisakuotanonjkn, Integer kuotanonjkn, String keterangan) {
 			this.kodebooking = kodebooking;
 			this.jenispasien = jenispasien;
@@ -220,10 +220,10 @@ public class ParamTambahAntrian {
 		public void setAngkaantrean(Integer angkaantrean) {
 			this.angkaantrean = angkaantrean;
 		}
-		public Integer getEstimasidilayani() {
+		public Long getEstimasidilayani() {
 			return estimasidilayani;
 		}
-		public void setEstimasidilayani(Integer estimasidilayani) {
+		public void setEstimasidilayani(Long estimasidilayani) {
 			this.estimasidilayani = estimasidilayani;
 		}
 		public Integer getSisakuotajkn() {
